@@ -1,0 +1,9 @@
+:root{
+    /*ejemplo*/
+    --color1: red;
+    --color2: white;
+}
+ul{
+  display: flex;
+  
+}
