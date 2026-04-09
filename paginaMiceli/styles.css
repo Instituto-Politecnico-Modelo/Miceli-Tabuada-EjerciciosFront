@@ -6,7 +6,6 @@
 @font-face {
     font-family: 'Overseer';
     src: url('overseerFont/Overseer.otf');
-
     font-weight: 400;
     font-style: normal;
 }
@@ -39,156 +38,112 @@ body{
     padding: 0;
 }
 
-ul{
-  display: flex;
-  
-}
-
-/* ============================================
-  HEADER STYLES
-   ============================================ */
+/*======== HEADER =========*/
 
 .header {
   background-color: var(--color1);
-  border-bottom: 2px solid var(--color2);
-  padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: 1px solid var(--color2);
 }
 
-.header__container {
+.headerContainer {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 
-.header__logo img {
-  max-width: 60px;
-  height: auto;
-  transition: all 0.2s ease;
-}
-
-.header__logo img:hover {
-  transform: scale(1.1);
-}
-
-.header__toggle {
-  display: none;
-  flex-direction: column;
-  background: none;
-  border: none;
-  cursor: pointer;
-  gap: 6px;
-  padding: 0;
-}
-
-.header__toggle span {
-  width: 25px;
-  height: 3px;
-  background-color: var(--color2);
-  transition: all 0.2s ease;
-}
-
-.header__nav {
+.headerNav {
   display: flex;
 }
 
-.header__list {
+.headerList {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.header__item {
-  position: relative;
-}
-
-.header__link {
+.headerLink {
+  padding: 0 1rem ;
   color: var(--color2);
-  text-decoration: none;
   font-weight: 700;
-  transition: all 0.2s ease;
-  padding: 0.5rem 0;
-  display: block;
-  font-family: 'Overseer', sans-serif;
+  font-family: 'Overseer';
+  text-decoration: none;
   font-size: 1.4rem;
+  border: 1px solid var(--color1);
+  border-left: 1px solid var(--color1);
+  border-right: 1px solid var(--color1);
 }
 
-.header__link:hover {
-  opacity: 0.7;
+.headerLink:hover {
   text-shadow: 0 0 10px var(--color2);
+  border-bottom: 2px solid var(--color1);
+  border-left: 1px solid var(--color2);
+  border-right: 1px solid var(--color2);
 }
+/*=====================================*/
 
-.header__link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color2);
-  transition: width 0.2s ease;
-}
 
-.header__link:hover::after {
-  width: 100%;
-}
-
-/* ============================================
-   RESPONSIVE - MOBILE
-   ============================================ */
-
+/*======== HEADER PARA MOBILE =========*/
 @media (max-width: 768px) {
-  .header__toggle {
+  .headerNav {
     display: flex;
   }
 
-  .header__nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background-color: var(--color1);
-    border-bottom: 2px solid var(--color2);
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease;
+  .headerList {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0;
   }
 
-  .header__nav.active {
-    max-height: 400px;
-  }
-
-  .header__list {
-    flex-direction: column;
-    gap: 0;
-    padding: 1rem;
-  }
-
-  .header__item {
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--color2);
-  }
-
-  .header__item:last-child {
+  .headerItem {
+    padding: 0;
     border-bottom: none;
   }
 
-  .header__toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(12px);
+  .headerLink {
+    font-size: 0;
+    color: transparent;
+    display: block;
   }
 
-  .header__toggle.active span:nth-child(2) {
-    opacity: 0;
+  .headerLink::before {
+    content: attr(data-mobile);
+    color: var(--color2);
+    font-size: 1rem;
   }
+}
+/*========================================*/
 
-  .header__toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-12px);
-  }
+/*======== MAIN =========*/
+
+.textoMedio {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.titulos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titulo{
+  font-family: 'Overseer', sans-serif;
+}
+
+.parteArriba {
+  font-size: 2.5rem;
+  margin: -10px;
+}
+
+.parteAbajo {
+  font-size: 8rem;
 }
