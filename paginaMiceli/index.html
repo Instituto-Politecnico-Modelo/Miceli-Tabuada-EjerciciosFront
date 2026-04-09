@@ -2,37 +2,66 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Fallout: Cronología</title>
-   <link rel="shortcut icon" href="img/logo100px.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fallout: Cronología</title>
+    <link rel="shortcut icon" href="img/logo100px.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/paginaMiceli/styles.css">
   </head>
 <body>
-  <header>
-    <div class="contenedor">
-      <div class="logo">
-        <img src="img/logo500px.png" alt="">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__logo">
+        <img src="img/logo500px.png" alt="Fallout Cronología Logo">
       </div>
-      <div class="secciones">
-        <ul>
-          <li>
-            <a href="#">Fallout</a>                
+      
+      <button class="header__toggle" id="toggleMenu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      
+      <nav class="header__nav" id="mainNav">
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link">Fallout</a>                
           </li>
-          <li>
-            <a href="#">Fallout 2</a>
+          <li class="header__item">
+            <a href="#" class="header__link">Fallout 2</a>
           </li>
-          <li>
-            <a href="#">Fallout 3</a>
+          <li class="header__item">
+            <a href="#" class="header__link">Fallout 3</a>
           </li>
-          <li>
-            <a href="#">Fallout 4</a>
+          <li class="header__item">
+            <a href="#" class="header__link">Fallout 4</a>
           </li>
-          <li>
-            <a href="#">Fallout: New Vegas</a>
+          <li class="header__item">
+            <a href="#" class="header__link">Fallout: New Vegas</a>
           </li>
         </ul>
-      </div>      
+      </nav>      
     </div>
   </header>
+
+  <script>
+    // Toggle del menú hamburguesa
+    const toggleBtn = document.getElementById('toggleMenu');
+    const mainNav = document.getElementById('mainNav');
+
+    toggleBtn.addEventListener('click', () => {
+      toggleBtn.classList.toggle('active');
+      mainNav.classList.toggle('active');
+    });
+
+    // Cerrar menú al hacer click en un link
+    document.querySelectorAll('.header__link').forEach(link => {
+      link.addEventListener('click', () => {
+        toggleBtn.classList.remove('active');
+        mainNav.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>
