@@ -1,7 +1,8 @@
 :root{
     /*ejemplo*/
-    --color1: #000e01;
-    --color2: #00ff1a;
+    --verdeOscuro: #000e01;
+    --verdePrincipal: #00ff1a;
+    --verdeSecundario: #002b04;
 }
 @font-face {
     font-family: 'Overseer';
@@ -31,8 +32,8 @@
 }
 
 body{
-    background-color: var(--color1);
-    color: var(--color2);
+    background-color: var(--verdeOscuro);
+    color: var(--verdePrincipal);
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -41,11 +42,11 @@ body{
 /*======== HEADER =========*/
 
 .header {
-  background-color: var(--color1);
+  padding-top: 1rem;
+  background-color: var(--verdeOscuro);
   position: sticky;
   top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid var(--color2);
+  border-bottom: 1px solid var(--verdePrincipal);
   display: flex;
   justify-content: center;
 }
@@ -64,21 +65,21 @@ body{
 
 .headerLink {
   padding: 0 1rem;
-  color: var(--color2);
+  color: var(--verdePrincipal);
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
   text-decoration: none;
   font-size: 1.4rem;
-  border: 1px solid var(--color1);
-  border-left: 1px solid var(--color1);
-  border-right: 1px solid var(--color1);
+  border: 1px solid var(--verdeOscuro);
+  border-left: 1px solid var(--verdeOscuro);
+  border-right: 1px solid var(--verdeOscuro);
 }
 
 .headerLink:hover {
-  text-shadow: 0 0 10px var(--color2);
-  border-bottom: 2px solid var(--color1);
-  border-left: 1px solid var(--color2);
-  border-right: 1px solid var(--color2);
+  text-shadow: 0 0 10px var(--verdePrincipal);
+  border-bottom: 2px solid var(--verdeOscuro);
+  border-left: 1px solid var(--verdePrincipal);
+  border-right: 1px solid var(--verdePrincipal);
 }
 /*=====================================*/
 /*======== HEADER PARA MOBILE =========*/
@@ -106,7 +107,7 @@ body{
 
   .headerLink::before {
     content: attr(data-mobile);
-    color: var(--color2);
+    color: var(--verdePrincipal);
     font-size: 1rem;
   } /* Agrega un pseudo-elemento para mostrar el texto en móvil*/
 }
@@ -137,4 +138,43 @@ body{
 
 .parteAbajo {
   font-size: 8rem;
+}
+
+.infoContainer{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+}
+
+.box{
+  display: flex;
+  align-items: stretch;
+  gap: 1rem;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  background: var(--verdeSecundario);
+  padding: 0.3em;
+}
+
+.logoContainer img{
+  height: 4em;
+}
+
+.dataContainer{
+  background: var(--verdeSecundario);
+  display: flex;
+  align-items: center;
+  padding: 0.2em;
+}
+
+.dataContainer p{
+  text-shadow: 0 0 7px var(--verdePrincipal);
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0;
 }
