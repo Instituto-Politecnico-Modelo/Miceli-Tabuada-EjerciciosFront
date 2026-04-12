@@ -49,6 +49,7 @@ body{
   background-color: var(--verdeOscuro);
   position: sticky;
   top: 0;
+  z-index: 100;
   border-bottom: 1px solid var(--verdePrincipal);
   display: flex;
   justify-content: center;
@@ -68,7 +69,7 @@ body{
   font-weight: 700;
   font-family: var(--fontPrincipal);
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.4rem);
   border: 1px solid var(--verdeOscuro);
   border-left: 1px solid var(--verdeOscuro);
   border-right: 1px solid var(--verdeOscuro);
@@ -83,6 +84,7 @@ body{
 
 .headerLink:hover {
   text-shadow: 0 0 10px var(--verdePrincipal);
+  transition: text-shadow 0.2s ease;
 }
 /*=====================================*/
 /*======== HEADER PARA MOBILE =========*/
@@ -118,11 +120,61 @@ body{
 
 /*======== MAIN =========*/
 
+.pipboyCondition {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.conditionTop,
+.conditionBottom {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+}
+
+.conditionMiddle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.conditionBars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.statBarH {
+  width: 3rem;
+  height: 6px;
+  background-color: var(--verdeOscuro);
+  border: 1px solid var(--verdePrincipal);
+  overflow: hidden;
+}
+
+.statFill {
+  width: 100%;
+  height: 100%;
+  background-color: var(--verdePrincipal);
+  box-shadow: 0 0 6px var(--verdePrincipal);
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem 2rem;
+}
+
 .textoMedio {
   display: flex;
   justify-content: center;
-  margin: 2rem 0;
-}
+  }
 
 .titulos {
   display: flex;
@@ -139,12 +191,12 @@ body{
 }
 
 .parteArriba {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
   margin: -10px;
 }
 
 .parteAbajo {
-  font-size: 8rem;
+  font-size: clamp(4rem, 10vw, 8rem);
 }
 
 .infoContainer{
@@ -152,7 +204,6 @@ body{
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  
 }
 
 .box{
@@ -191,4 +242,144 @@ body{
 
 .dataContainer img{
   height: 1.2em;
+}
+
+.introSection {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  border-image: linear-gradient(to right, transparent, var(--verdePrincipal), transparent) 1;
+} 
+
+.introDesc {
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+  font-weight: 400;
+  line-height: 2;
+  color: var(--verdePrincipal);
+  opacity: 0.85;
+  margin: 0;
+  letter-spacing: 0.04em;
+}
+
+/*======== GAMES SECTION =========*/
+
+.gamesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.gameCard {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid var(--verdeSecundario);
+  background-color: var(--verdeSecundario);
+  text-decoration: none;
+  color: var(--verdePrincipal);
+  transition: all 0.2s ease;
+}
+
+.gameCard:hover {
+  border-color: var(--verdePrincipal);
+  box-shadow: 0 0 14px rgba(0, 255, 26, 0.25);
+  transform: translateX(6px);
+}
+
+.gameLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-width: 5rem;
+}
+
+.gameRight {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.gameYear {
+  font-family: 'Courier New', monospace;
+  font-size: clamp(0.75rem, 1.2vw, 1rem);
+  opacity: 0.5;
+  text-align: center;
+}
+
+.gameTitle {
+  font-family: var(--fontTitulos);
+  font-size: clamp(1rem, 2.5vw, 1.6rem);
+  margin: 0;
+  text-shadow: 0 0 6px var(--verdePrincipal);
+}
+
+.gameDesc {
+  font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+  font-weight: 400;
+  opacity: 0.7;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.gameArrow {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  opacity: 0.4;
+  transition: all 0.2s ease;
+}
+
+.gameCard:hover .gameArrow {
+  opacity: 1;
+}
+
+@media (max-  : 768px) {
+  .gamesSection {
+    padding: 1rem;
+  }
+
+  .gameCard {
+    grid-template-columns: 4rem 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .gameArrow {
+    display: none;
+  }
+}
+
+/*========================================*/
+
+/*======== FOOTER =========*/
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--verdePrincipal);
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.footerNombre {
+  font-family: var(--fontTitulos);
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  margin: 0;
+  text-shadow: 0 0 6px var(--verdePrincipal);
+}
+
+.footerInfo {
+  font-size: 0.85rem;
+  font-weight: 400;
+  opacity: 0.6;
+  margin: 0;
 }

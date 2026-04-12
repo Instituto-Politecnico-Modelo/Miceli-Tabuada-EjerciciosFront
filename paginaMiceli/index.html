@@ -6,14 +6,14 @@
   <title>Fallout: Cronología</title>
   <link rel="shortcut icon" href="img/logo100px.png" type="image/x-icon">
   <link rel="stylesheet" href="/paginaMiceli/styles.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,1,0&icon_names=fork_right,person" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,1,0&icon_names=arrow_right,fork_right,person" />
 </head>
 <body>
   <header class="header">
     <nav class="headerNav" id="mainNav">
       <ul class="headerList">
         <li class="headerItem">
-          <a href="/paginaMiceli/index.html" class="headerLink active" data-mobile="HOME">HOME</a>                
+          <a href="/paginaMiceli/index.html" class="headerLink active" data-mobile="H ">HOME</a>                
         </li>
         <li class="headerItem">
           <a href="/paginaMiceli/fallout.html" class="headerLink" data-mobile="F1">FALLOUT</a>
@@ -35,16 +35,40 @@
   </header>
 
   <main>
+  <section class="heroSection">
+    <div class="pipboyCondition">
 
-    <div class="textoMedio">
-      <h1 class="titulos">
-        <span class="titulo parteArriba">
-          La Cronología:
-        </span>
-        <span class="titulo parteAbajo">
-          Fallout
-        </span>
-      </h1>
+      <div class="conditionTop">
+        <div class="statBarH"><div class="statFill" style="width:100%"></div></div>
+      </div>
+
+      <div class="conditionMiddle">
+        <div class="conditionBars conditionBarsLeft">
+          <div class="statBarH"><div class="statFill" style="width:100%"></div></div>
+          <div class="statBarH"><div class="statFill" style="width:100%"></div></div>
+        </div>
+
+        <div class="textoMedio">
+          <h1 class="titulos">
+            <span class="titulo parteArriba">
+              La Cronología:
+            </span>
+            <span class="titulo parteAbajo">
+              Fallout
+            </span>
+          </h1>
+        </div>
+
+        <div class="conditionBars conditionBarsRight">
+          <div class="statBarH"><div class="statFill" style="width:100%"></div></div>
+          <div class="statBarH"><div class="statFill" style="width:100%"></div></div>
+        </div>
+      </div>
+
+      <div class="conditionBottom">
+        <div class="statBarH"><div class="statFill" style="width:100%"></div></div>
+      </div>
+
     </div>
     <div class="infoContainer">
       <div class="box">
@@ -56,7 +80,6 @@
           <p>1</p>
         </div>
       </div>
-  
       <div class="box">
         <div class="logoContainer">
           <img src="img/logoGithub.png" alt="logo de github">
@@ -67,7 +90,74 @@
         </div>
       </div>
     </div>
+  </section>
+    
+    <section class="introSection">
+      <p class="introDesc">
+        Explorá la historia de una de las sagas de videojuegos más icónicas de la historia.
+        Desde los yermos de California hasta las ruinas de Boston, recorremos cada juego y su lugar en la línea de tiempo.
+      </p>
+    </section>
+
+    <section class="gamesSection">
+      <a href="/paginaMiceli/fallout.html" class="gameCard">
+        <div class="gameLeft">
+          <span class="gameYear">Año 2161</span>
+          <span class="material-symbols-outlined gameArrow">arrow_right</span>
+        </div>
+        <div class="gameRight">
+          <h2 class="gameTitle">Fallout</h2>
+          <p class="gameDesc">California. El Vault 13 necesita un chip de agua antes de que su gente muera de sed.</p>
+        </div>
+      </a>
+      <a href="#" class="gameCard">
+        <div class="gameLeft">
+          <span class="gameYear">Año 2241</span>
+          <span class="material-symbols-outlined gameArrow">arrow_right</span>
+        </div>
+        <div class="gameRight">
+          <h2 class="gameTitle">Fallout 2</h2>
+          <p class="gameDesc">Arroyo. Un Elegido parte en busca del GECK para salvar a su tribu del hambre.</p>
+        </div>
+      </a>
+      <a href="#" class="gameCard">
+        <div class="gameLeft">
+          <span class="gameYear">Año 2277</span>
+          <span class="material-symbols-outlined gameArrow">arrow_right</span>
+        </div>
+        <div class="gameRight">
+          <h2 class="gameTitle">Fallout 3</h2>
+          <p class="gameDesc">Capital Wasteland. Tu padre escapó del Vault 101 y nadie sabe por qué.</p>
+        </div>
+      </a>
+      <a href="#" class="gameCard">
+        <div class="gameLeft">
+          <span class="gameYear">Año 2281</span>
+          <span class="material-symbols-outlined gameArrow">arrow_right</span>
+        </div>
+        <div class="gameRight">
+          <h2 class="gameTitle">Fallout: New Vegas</h2>
+          <p class="gameDesc">Mojave. Un mensajero dado por muerto despierta buscando al hombre que lo mató.</p>
+        </div>
+      </a>
+      <a href="#" class="gameCard">
+        <div class="gameLeft">
+          <span class="gameYear">Año 2287</span>
+          <span class="material-symbols-outlined gameArrow">arrow_right</span>
+        </div>
+        <div class="gameRight">
+          <h2 class="gameTitle">Fallout 4</h2>
+          <p class="gameDesc">Commonwealth. Tu hijo fue secuestrado mientras dormías en criostasis 210 años.</p>
+        </div>
+      </a>
+    </section>
 
   </main>
+
+  <footer class="footer">
+    <p class="footerNombre">Francisco Miceli</p>
+    <p class="footerInfo">Trabajo Práctico — Instituto Politécnico Modelo · 2026</p>
+  </footer>
+
 </body>
 </html>
