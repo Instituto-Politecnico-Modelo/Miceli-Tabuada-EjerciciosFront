@@ -1,1 +1,178 @@
-/* Estilos específicos para la página de Fallout 1 */
+/*======== GAME HERO =========*/
+
+.heroSection1 {
+  background: url('/paginaMiceli/img/fallout1.jpg') top center/cover no-repeat;
+  color: var(--verdePrincipal);
+} 
+
+.gameHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--verdeSecundario);
+}
+
+.gameHeroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 700px;
+}
+
+.gameHeroYear {
+  font-family: 'Courier New', monospace;
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  opacity: 0.5;
+  margin: 0;
+}
+
+.gameHeroTitle {
+  font-family: var(--fontTitulos);
+  font-size: clamp(4rem, 12vw, 9rem);
+  margin: 0;
+  line-height: 1;
+  text-shadow: 0 0 30px var(--verdePrincipal);
+}
+
+.gameHeroSub {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  font-weight: 400;
+  opacity: 0.75;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.gameHeroLink {
+  color: var(--verdePrincipal);
+  text-decoration: none;
+  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  border: 1px solid var(--verdePrincipal);
+  padding: 0.5rem 1.2rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.gameHeroLink:hover {
+  background-color: var(--verdePrincipal);
+  color: var(--verdeOscuro);
+}
+
+/*======== STORYLINE =========*/
+
+.storyline {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.storyChapter {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.chapterReverse {
+  justify-content: flex-end;
+}
+
+.chapterText {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-left: 2px solid var(--verdePrincipal);
+  padding-left: 1.5rem;
+}
+
+.chapterReverse .chapterText {
+  border-left: none;
+  border-right: 2px solid var(--verdePrincipal);
+  padding-left: 0;
+  padding-right: 1.5rem;
+  text-align: right;
+}
+
+.chapterNumber {
+  font-family: 'Courier New', monospace;
+  font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+  opacity: 0.4;
+}
+
+.chapterTitle {
+  font-family: var(--fontTitulos);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin: 0;
+  text-shadow: 0 0 8px var(--verdePrincipal);
+}
+
+.chapterDesc {
+  font-size: clamp(0.85rem, 1.5vw, 1rem);
+  font-weight: 400;
+  line-height: 1.9;
+  opacity: 0.8;
+  margin: 0;
+}
+
+/*======== CHARACTERS =========*/
+
+.characters {
+  padding: 3rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.charactersTitle {
+  font-family: var(--fontTitulos);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  text-align: center;
+  margin: 0 0 2rem 0;
+  text-shadow: 0 0 8px var(--verdePrincipal);
+}
+
+.charactersGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.characterCard {
+  background-color: var(--verdeSecundario);
+  border: 1px solid var(--verdeSecundario);
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.characterCard:hover {
+  border-color: var(--verdePrincipal);
+  box-shadow: 0 0 12px rgba(0,255,26,0.2);
+}
+
+.characterName {
+  font-family: var(--fontTitulos);
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  margin: 0;
+}
+
+.characterRole {
+  font-family: 'Courier New', monospace;
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+  opacity: 0.5;
+  margin: 0;
+}
+
+.characterDesc {
+  font-size: clamp(0.8rem, 1.3vw, 0.9rem);
+  font-weight: 400;
+  opacity: 0.75;
+  line-height: 1.6;
+  margin: 0.4rem 0 0 0;
+}

@@ -151,7 +151,6 @@ body{
 .statBarH {
   width: 3rem;
   height: 6px;
-  background-color: var(--verdeOscuro);
   border: 1px solid var(--verdePrincipal);
   overflow: hidden;
 }
@@ -167,7 +166,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 3rem 2rem;
 }
 
