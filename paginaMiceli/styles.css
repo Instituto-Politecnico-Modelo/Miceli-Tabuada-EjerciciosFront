@@ -1,7 +1,9 @@
 :root{
     --verdeOscuro: #000e01;
     --verdePrincipal: #00ff1a;
+    --verdePrincipalVariante: #00cc14;
     --verdeSecundario: #002b04;
+    --verdeSecundarioVariante: #004d09;
     --fontPrincipal: 'Roboto', sans-serif;
     --fontTitulos: 'Overseer', sans-serif;
 }
@@ -217,6 +219,11 @@ body{
   display: flex;
   align-items: stretch;
   gap: 3px;
+}
+
+.box > a:hover{
+  background-color: var(--verdeSecundarioVariante);
+  transition: all 0.2s ease;
 }
 
 .logoContainer {
