@@ -1,6 +1,6 @@
 /*======== GAME HERO =========*/
 .heroSection1 {
-  background: url('/paginaMiceli/img/fallout1.jpg') top center/cover no-repeat;
+  background: url('img/fallout1.jpg') top center/cover no-repeat;
   color: var(--verdePrincipal);
 } 
 
