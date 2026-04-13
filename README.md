@@ -1,6 +1,6 @@
 <div align="center">
 
-![Portada](img/portadaPagina.png)
+![Portada](/paginaMiceli/img/portadaPagina.png)
 
 # La Cronología: Fallout
 
