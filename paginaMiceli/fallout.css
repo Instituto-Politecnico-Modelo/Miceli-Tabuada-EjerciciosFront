@@ -37,6 +37,11 @@
   text-shadow: 0 0 30px var(--verdePrincipal);
 }
 
+.gameHeroTitle::selection{
+  background-color: var(--verdePrincipal);
+  color: var(--verdeOscuro);
+}
+
 .gameHeroSub {
   font-size: clamp(0.9rem, 2vw, 1.2rem);
   font-weight: 400;

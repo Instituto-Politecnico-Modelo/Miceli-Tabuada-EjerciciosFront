@@ -32,6 +32,11 @@
     font-style: italic;
 }
 
+*::selection{
+  background-color: var(--verdePrincipal);
+  color: var(--verdeOscuro);
+}
+
 body{
     background-color: var(--verdeOscuro);
     color: var(--verdePrincipal);
@@ -131,21 +136,21 @@ body{
   width: 100%;
 }
 
-.conditionTop,
-.conditionBottom {
+.conditionArriba,
+.conditionAbajo {
   display: flex;
   justify-content: center;
   width: 50%;
 }
 
-.conditionMiddle {
+.conditionMedio {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
 }
 
-.conditionBars {
+.conditionBarras {
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
@@ -237,9 +242,13 @@ body{
 .dataContainer > *{
   text-shadow: 0 0 4px var(--verdePrincipal);
   text-align: center;
-  font-size: clamp(24px, 2vw, 26px);
+  font-size: clamp(20px, 2vw, 20px);
   line-height: 1.5;
   margin: 0;
+}
+
+.dataContainer p{
+  font-weight: 600;
 }
 
 .dataContainer span{
@@ -305,14 +314,14 @@ body{
   transform: translateX(6px);
 }
 
-.gameLeft {
+.gameIzquierda {
   display: flex;
   align-items: center;
   gap: 0.3rem;
   min-width: 5rem;
 }
 
-.gameRight {
+.gameDerecha {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
