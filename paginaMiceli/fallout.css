@@ -1,5 +1,4 @@
 /*======== GAME HERO =========*/
-
 .heroSection1 {
   background: url('/paginaMiceli/img/fallout1.jpg') top center/cover no-repeat;
   color: var(--verdePrincipal);
@@ -52,7 +51,7 @@
   font-size: clamp(0.8rem, 1.5vw, 1rem);
   border: 1px solid var(--verdePrincipal);
   padding: 0.5rem 1.2rem;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: all 0.2s ease;
   margin-top: 0.5rem;
 }
 
@@ -77,6 +76,12 @@
   justify-content: flex-start;
 }
 
+.chapterNumber {
+  font-family: monospace;
+  font-size: clamp(0.7rem, 1.2vw, 0.85rem);
+  opacity: 0.4;
+}
+
 .chapterReverse {
   justify-content: flex-end;
 }
@@ -98,11 +103,6 @@
   text-align: right;
 }
 
-.chapterNumber {
-  font-family: 'Courier New', monospace;
-  font-size: clamp(0.7rem, 1.2vw, 0.85rem);
-  opacity: 0.4;
-}
 
 .chapterTitle {
   font-family: var(--fontTitulos);
@@ -119,15 +119,15 @@
   margin: 0;
 }
 
-/*======== CHARACTERS =========*/
+/*======== personajes =========*/
 
-.characters {
+.personajesSection {
   padding: 3rem 2rem;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-.charactersTitle {
+.personajesTitle {
   font-family: var(--fontTitulos);
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   text-align: center;
@@ -135,41 +135,41 @@
   text-shadow: 0 0 8px var(--verdePrincipal);
 }
 
-.charactersGrid {
+.personajesGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.2rem;
 }
 
-.characterCard {
+.personajeCard {
   background-color: var(--verdeSecundario);
   border: 1px solid var(--verdeSecundario);
   padding: 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.characterCard:hover {
+.personajeCard:hover {
   border-color: var(--verdePrincipal);
-  box-shadow: 0 0 12px rgba(0,255,26,0.2);
+  box-shadow: 0 0 12px var(--verdePrincipal);
 }
 
-.characterName {
+.personajeName {
   font-family: var(--fontTitulos);
   font-size: clamp(1rem, 2vw, 1.3rem);
   margin: 0;
 }
 
-.characterRole {
+.personajeRol {
   font-family: 'Courier New', monospace;
   font-size: clamp(0.7rem, 1vw, 0.8rem);
   opacity: 0.5;
   margin: 0;
 }
 
-.characterDesc {
+.personajeDesc {
   font-size: clamp(0.8rem, 1.3vw, 0.9rem);
   font-weight: 400;
   opacity: 0.75;

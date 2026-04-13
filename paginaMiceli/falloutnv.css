@@ -1,0 +1,9 @@
+:root{
+    /*cambios por la estetica del juego*/
+    --verdeOscuro: #0e0a03;
+    --verdePrincipal: #CF9435;
+    --verdeSecundario: #463212;
+}
+.heroSectionNV {
+  background: url('/paginaMiceli/img/falloutNv.jpg') top center/cover no-repeat;
+}

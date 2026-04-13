@@ -1,5 +1,4 @@
 :root{
-    /*ejemplo*/
     --verdeOscuro: #000e01;
     --verdePrincipal: #00ff1a;
     --verdeSecundario: #002b04;
@@ -86,6 +85,10 @@ body{
   text-shadow: 0 0 10px var(--verdePrincipal);
   transition: text-shadow 0.2s ease;
 }
+
+.headerLink:active {
+  text-shadow: none;
+}
 /*=====================================*/
 /*======== HEADER PARA MOBILE =========*/
 @media (max-width: 768px) {
@@ -120,7 +123,7 @@ body{
 
 /*======== MAIN =========*/
 
-.pipboyCondition {
+.pipboyConditionContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -190,12 +193,12 @@ body{
 }
 
 .parteArriba {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(2rem, 3vw, 2.5rem);
   margin: -10px;
 }
 
 .parteAbajo {
-  font-size: clamp(4rem, 10vw, 8rem);
+  font-size: clamp(5rem, 10vw, 11rem);
 }
 
 .infoContainer{
@@ -208,7 +211,7 @@ body{
 .box{
   display: flex;
   align-items: stretch;
-  gap: 1rem;
+  gap: 3px;
 }
 
 .logoContainer {
@@ -219,7 +222,7 @@ body{
 }
 
 .logoContainer img{
-  height: 3.1em;
+  height: clamp(3rem, 4vw, 4.2em);
 }
 
 .dataContainer{
@@ -234,18 +237,21 @@ body{
 .dataContainer > *{
   text-shadow: 0 0 4px var(--verdePrincipal);
   text-align: center;
-  font-size: 1.2em;
+  font-size: clamp(24px, 2vw, 26px);
   line-height: 1.5;
   margin: 0;
 }
 
-.dataContainer img{
-  height: 1.2em;
+.dataContainer span{
+  font-size: clamp(24px, 2vw, 28px);
+
 }
 
 .introSection {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 3rem 2rem;
   margin: 0 auto;
   max-width: 800px;
@@ -263,6 +269,11 @@ body{
   opacity: 0.85;
   margin: 0;
   letter-spacing: 0.04em;
+}
+
+.introFoto{
+  width: clamp(120px, 20vw, 100px);
+  margin-top: 1rem;
 }
 
 /*======== GAMES SECTION =========*/
