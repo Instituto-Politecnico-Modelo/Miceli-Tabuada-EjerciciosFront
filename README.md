@@ -4,6 +4,8 @@
 
 # La Cronología: Fallout
 
+### 🔗 [Acceder a la página](https://instituto-politecnico-modelo.github.io/Miceli-Tabuada-EjerciciosFront/paginaMiceli/index.html)
+
 </div>
 
 Una página web interactiva que explora la historia y cronología de la saga de videojuegos **Fallout**, presentada con la estética característica de los **Pip-Boy** del universo falloutiano.
