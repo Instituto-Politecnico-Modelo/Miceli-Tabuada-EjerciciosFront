@@ -1,0 +1,47 @@
+.parrafo-azul {
+    color: blue;
+}
+
+.enlace-custom {
+    color: green;
+    text-decoration: none;
+}
+
+
+.lista-custom {
+    list-style-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12'><circle cx='6' cy='6' r='6' fill='orange'/></svg>");
+}
+
+
+.menu {
+    list-style: none;
+    padding: 0;
+    background-color: #615555;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+.menu li a:hover {
+    background-color: #555;
+}
+
+
+.caja {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(253, 0, 0);
+    transition: background-color 0.3s;
+}
+
+.caja:hover {
+    background-color: rgb(9, 255, 0);
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarjeta de Usuario</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            width: 100%;
+            background-color: #eee;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .tarjeta {
+            width: 280px;
+            border: 1px solid #ccc;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .banner {
+            background-color: steelblue;
+            height: 80px;
+        }
+
+        .foto-perfil {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid white;
+            margin-top: -40px;
+        }
+
+        .datos {
+            padding: 10px;
+        }
+
+        .datos p {
+            margin: 5px 0;
+        }
+
+        .estadisticas {
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #ccc;
+            padding: 10px 0;
+        }
+
+        .estadisticas div {
+            text-align: center;
+        }
+
+        .estadisticas span {
+            display: block;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <button onclick="location.href='../HtmlP2/login.html'">Login</button>
+        <button onclick="location.href='../HtmlP2/register.html'">Register</button>
+    </nav>
+
+    <div class="tarjeta">
+        <div class="banner"></div>
+
+        <img class="foto-perfil" src="https://www.svgrepo.com/show/384674/account-avatar-profile-user-11.svg" alt="Foto de perfil">
+
+        <div class="datos">
+            <p><strong>Lorenzo Tabuada</strong></p>
+            <p>Buenos Aires, Argentina</p>
+        </div>
+
+        <div class="estadisticas">
+            <div>
+                <span>320</span>
+                Seguidores
+            </div>
+            <div>
+                <span>180</span>
+                Likes
+            </div>
+            <div>
+                <span>47</span>
+                Fotos
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

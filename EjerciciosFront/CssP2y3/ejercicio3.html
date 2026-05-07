@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Instagram</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            color: #262626;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 16px;
+            border-bottom: 1px solid #dbdbdb;
+            background-color: #fff;
+        }
+
+        header h1 {
+            font-size: 1rem;
+        }
+
+        header span {
+            font-size: 1.3rem;
+            cursor: pointer;
+        }
+
+        .perfil {
+            padding: 16px;
+            background-color: #fff;
+        }
+
+        .perfil-top {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #dbdbdb;
+            object-fit: cover;
+        }
+
+        .stats {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+            justify-content: space-around;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat span {
+            display: block;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .stat p {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .bio {
+            margin-top: 12px;
+        }
+
+        .bio strong {
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .bio p {
+            font-size: 0.85rem;
+            color: #444;
+            margin-top: 4px;
+        }
+
+        .btn-seguir {
+            display: block;
+            width: 100%;
+            margin-top: 12px;
+            padding: 6px;
+            background-color: #0095f6;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .highlights {
+            display: flex;
+            gap: 16px;
+            padding: 12px 16px;
+            overflow-x: auto;
+            background-color: #fff;
+            border-bottom: 1px solid #dbdbdb;
+        }
+
+        .highlight {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            min-width: 60px;
+        }
+
+        .highlight-circle {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: 2px solid #dbdbdb;
+            object-fit: cover;
+        }
+
+        .highlight p {
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid #dbdbdb;
+            background-color: #fff;
+        }
+
+        .tabs button {
+            flex: 1;
+            padding: 10px;
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            color: #888;
+        }
+
+        .tabs button.activo {
+            border-bottom: 2px solid #262626;
+            color: #262626;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+        }
+
+        .grid img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+        }
+
+        @media (min-width: 600px) {
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+
+            .bio strong {
+                font-size: 1rem;
+            }
+
+            .bio p {
+                font-size: 0.9rem;
+            }
+
+            header h1 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span>&#8592;</span>
+        <h1>lorenzotabuada</h1>
+        <span>&#8942;</span>
+    </header>
+
+    <section class="perfil">
+        <div class="perfil-top">
+            <img class="avatar" src="https://www.svgrepo.com/show/384674/account-avatar-profile-user-11.svg" alt="Avatar">
+            <div class="stats">
+                <div class="stat">
+                    <span>47</span>
+                    <p>publicaciones</p>
+                </div>
+                <div class="stat">
+                    <span>320</span>
+                    <p>seguidores</p>
+                </div>
+                <div class="stat">
+                    <span>180</span>
+                    <p>seguidos</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bio">
+            <strong>Lorenzo Tabuada</strong>
+            <p> Buenos Aires, Argentina</p>
+            <p>Fotógrafo | Viajero </p>
+            <p>PROFE NO ENCONTRAMOS LAS IMAGENES QUE PEDIAS EN LAS PUBLICACIONES </p>
+        </div>
+
+        <button class="btn-seguir">Seguir</button>
+    </section>
+
+    <section class="highlights">
+        <div class="highlight">
+            <img class="highlight-circle" src="https://picsum.photos/seed/h1/60/60" alt="Destacado 1">
+            <p>Viajes</p>
+        </div>
+        <div class="highlight">
+            <img class="highlight-circle" src="https://picsum.photos/seed/h2/60/60" alt="Destacado 2">
+            <p>Fotos</p>
+        </div>
+        <div class="highlight">
+            <img class="highlight-circle" src="https://picsum.photos/seed/h3/60/60" alt="Destacado 3">
+            <p>Amigos</p>
+        </div>
+        <div class="highlight">
+            <img class="highlight-circle" src="https://picsum.photos/seed/h4/60/60" alt="Destacado 4">
+            <p>Comida</p>
+        </div>
+    </section>
+
+    <div class="tabs">
+        <button class="activo">&#9974;</button>
+        <button>&#9776;</button>
+        <button>&#9673;</button>
+    </div>
+
+    <section class="grid">
+        <img src="img/coliseo.jpeg" alt="Publicación 1">
+        <img src="img/HD-wallpaper-burj-khalifa.jpg" alt="Publicación 2">
+        <img src="img/rusia.jpg" alt="Publicación 3">
+        <img src="img/Sagrada.jpg" alt="Publicación 4">
+        <img src="img/torreEiffel.jpg" alt="Publicación 5">
+        <img src="img/machu-picchu.avif" alt="Publicación 6">
+        <img src="img/operaSidney.avif" alt="Publicación 7">
+        <img src="img/piramides.avif" alt="Publicación 8">
+        <img src="img/coliseo.jpeg" alt="Publicación 9">
+    </section>
+
+</body>
+</html>
